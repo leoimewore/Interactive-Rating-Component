@@ -14,11 +14,12 @@ for (let i=0; i<rating.length ; i++)
 
         submit.addEventListener('click', function(){
         
+        if(ratingNumber> 0) {
           //After Clicking button  
         result.classList.remove('hidden');
         document.querySelector('.message').textContent = ratingNumber;
         overlay.classList.remove('hidden');
-
+        }
 
 ///  Get Back to original page
         
@@ -31,7 +32,11 @@ for (let i=0; i<rating.length ; i++)
     overlay.addEventListener('click', function(){
         overlay.classList.add('hidden');
         result.classList.add('hidden');
+        ratingNumber = ""
+        
+        
     })
+    
     
 
 
